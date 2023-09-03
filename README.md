@@ -1,6 +1,6 @@
-# Stable Diffusion Script to turn images into Ascii Art
+# Stable Diffusion Auto1111 webui Script to turn images into Ascii Art
 
-ASCII Art Image Converter for Stable Diffusion Web UI
+ASCII Art Image Converter for Stable Diffusion Automatic 1111 Web UI
 
 ![Example Image](./ascii.png)
 
@@ -27,6 +27,9 @@ This script allows you to convert images into ASCII art within the Stable Diffus
 - **Font Type**: Allows you to select different fonts for the ASCII art. Options include "default", "Arial", "Courier New", "Times New Roman", "Comic Sans MS", and "Verdana". - these are on most windows machine already, if you don't have a certain font the default is used automaticlly 
 
 ![Example Image](./ascii2.png)
+
+
+Stable Diffusion Automatic1111 Github repo [https://github.com/AUTOMATIC1111/stable-diffusion-webui]
 
 ## License
 
