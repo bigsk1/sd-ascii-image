@@ -18,7 +18,8 @@ This script allows you to convert images into ASCII art within the Stable Diffus
 1. Open the Stable Diffusion Web UI and navigate to the IMG2IMG section.
 2. At the bottom of the IMG2IMG section, you'll find a dropdown for selecting scripts.
 3. Select "Convert to ASCII Art Image" from the dropdown to activate the script.
-
+4. Save the image from the web ui as they won't be saved in outputs img2img folder
+   
 ### Parameters
 
 - **ASCII Width**: Adjusts the width of the ASCII art. Range: 50-200.
@@ -28,7 +29,7 @@ This script allows you to convert images into ASCII art within the Stable Diffus
 
 ![Example Image](./ascii2.png)
 
-
+  
 ![Stable Diffusion Automatic1111 Github repo](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 
 ## License
@@ -36,4 +37,4 @@ This script allows you to convert images into ASCII art within the Stable Diffus
 This script is open-source and free to use. For any issues or contributions, please open a GitHub issue or pull request.
 
 
-
+![Example Image](./ascii3.png)
