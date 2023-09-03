@@ -38,3 +38,5 @@ This script is open-source and free to use. For any issues or contributions, ple
 
 
 ![Example Image](./ascii3.png)
+
+you can find a standalone ascii art converter I made to run on linux, windows, docker and vscode devcontainer here [bigsk1 github page for airats](https://bigsk1.github.io/posts/Converting-images-to-ASCII/)
