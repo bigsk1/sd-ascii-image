@@ -25,7 +25,8 @@ This script allows you to convert images into ASCII art within the Stable Diffus
 - **ASCII Width**: Adjusts the width of the ASCII art. Range: 50-200.
 - **Letter Spacing**: Adjusts the spacing between ASCII characters. Range: 0-20.
 - **Font Size**: Adjusts the font size of the ASCII characters. Range: 8-48.
-- **Font Type**: Allows you to select different fonts for the ASCII art. Options include "default", "Arial", "Courier New", "Times New Roman", "Comic Sans MS", and "Verdana". - these are on most windows machine already, if you don't have a certain font the default is used automatically 
+- **Font Type**: Allows you to select different fonts for the ASCII art. Options include "default", "Arial", "Courier New", "Times New Roman", "Comic Sans MS", and "Verdana". - these are on most windows machine already, if you don't have a certain font the default is used automatically
+- **Background colors**: Select up to 20 different background colors
 
 ![Example Image](./ascii2.png)
 
@@ -40,3 +41,13 @@ This script is open-source and free to use. For any issues or contributions, ple
 ![Example Image](./ascii3.png)
 
 you can find a standalone ascii art converter I made to run on linux, windows, docker and vscode devcontainer here [bigsk1 github page for airats](https://bigsk1.github.io/posts/Converting-images-to-ASCII/)
+
+![Example Image](./ascii4.png)
+
+---
+
+![Example Image](./ascii5.png)
+
+---
+
+![Example Image](./ascii6.png)
