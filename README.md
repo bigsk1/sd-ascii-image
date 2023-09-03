@@ -25,7 +25,7 @@ This script allows you to convert images into ASCII art within the Stable Diffus
 - **ASCII Width**: Adjusts the width of the ASCII art. Range: 50-200.
 - **Letter Spacing**: Adjusts the spacing between ASCII characters. Range: 0-20.
 - **Font Size**: Adjusts the font size of the ASCII characters. Range: 8-48.
-- **Font Type**: Allows you to select different fonts for the ASCII art. Options include "default", "Arial", "Courier New", "Times New Roman", "Comic Sans MS", and "Verdana". - these are on most windows machine already, if you don't have a certain font the default is used automaticlly 
+- **Font Type**: Allows you to select different fonts for the ASCII art. Options include "default", "Arial", "Courier New", "Times New Roman", "Comic Sans MS", and "Verdana". - these are on most windows machine already, if you don't have a certain font the default is used automatically 
 
 ![Example Image](./ascii2.png)
 
