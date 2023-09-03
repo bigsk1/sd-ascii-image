@@ -126,15 +126,15 @@ class Script(scripts.Script):
 
         for i in range(len(proc.images)):
             ascii_art = image_to_ascii(proc.images[i], width)
-            
+    
             # Check if the folder exists and create it if not
-        if not os.path.exists("outputs/img2img-images/ascii"):
-            os.makedirs("outputs/img2img-images/ascii")
+            if not os.path.exists("outputs/img2img-images/ascii"):
+                os.makedirs("outputs/img2img-images/ascii")
 
-        # Save ASCII art to a text file
-        with open(f"outputs/img2img-images/ascii/ascii_art_{proc.seed + i}.txt", "w") as f:
-            f.write(ascii_art)
-         
+            # Save ASCII art to a text file
+            with open(f"outputs/img2img-images/ascii/ascii_art_{proc.seed + i}.txt", "w") as f:
+                f.write(ascii_art)
+    
             ascii_img = ascii_to_image(ascii_art, block_size=font_size, kerning=kerning, font=font, bg_color=bg_color)
             proc.images[i] = ascii_img
 
