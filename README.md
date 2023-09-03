@@ -30,7 +30,7 @@ This script allows you to convert images into ASCII art within the Stable Diffus
 ![Example Image](./ascii2.png)
 
   
-![Stable Diffusion Automatic1111 Github repo](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+[Stable Diffusion Automatic1111 Github repo](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 
 ## License
 
