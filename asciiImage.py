@@ -31,19 +31,54 @@ def image_to_ascii(image, new_width):
     ascii_image = "\n".join([ascii_pixels[i: i + greyscale_image.width] for i in range(0, len(ascii_pixels), greyscale_image.width)])
     return ascii_image
 
-def ascii_to_image(ascii_str, block_size=10, kerning=0, font=ImageFont.load_default()):
+def ascii_to_image(ascii_str, block_size=10, kerning=0, font=ImageFont.load_default(), bg_color="white"):
     lines = ascii_str.split("\n")
     width = len(lines[0]) * block_size
     height = len(lines) * block_size
 
-    img = Image.new("L", (width, height), color=255)
+    # Map color names to RGB values
+    color_map = {
+    "white": (255, 255, 255),
+    "black": (0, 0, 0),
+    "red": (255, 0, 0),
+    "green": (0, 255, 0),
+    "blue": (0, 0, 255),
+    "yellow": (255, 255, 0),
+    "purple": (128, 0, 128),
+    "orange": (255, 165, 0),
+    "pink": (255, 192, 203),
+    "cyan": (0, 255, 255),
+    "brown": (139, 69, 19),
+    "gray": (128, 128, 128),
+    "lime": (0, 255, 0),
+    "indigo": (75, 0, 130),
+    "violet": (238, 130, 238),
+    "gold": (255, 215, 0),
+    "silver": (192, 192, 192),
+    "beige": (245, 245, 220),
+    "teal": (0, 128, 128),
+    "navy": (0, 0, 128),
+    "maroon": (128, 0, 0)
+    }
+
+    # Set default background color if none is selected
+    if not bg_color:
+        bg_color = "white"
+
+    # Get the RGB value for the background color
+    bg_color_rgb = color_map.get(bg_color, (255, 255, 255))
+
+    # Set text color based on background color
+    text_color = (0, 0, 0) if bg_color != "black" else (255, 255, 255)
+
+    img = Image.new("RGB", (width, height), color=color_map.get(bg_color, (255, 255, 255)))
     draw = ImageDraw.Draw(img)
 
     y = 0
     for line in lines:
         x = 0
         for char in line:
-            draw.text((x + kerning, y), char, font=font, fill=0)
+            draw.text((x + kerning, y), char, font=font, fill=text_color)
             x += block_size + kerning
         y += block_size
 
@@ -62,9 +97,10 @@ class Script(scripts.Script):
         kerning = gr.Slider(minimum=0, maximum=10, step=1, value=0, label="Letter Spacing")
         font_size = gr.Slider(minimum=8, maximum=20, step=1, value=12, label="Font Size")
         font_type = gr.Dropdown(choices=["default", "Arial", "Courier New", "Times New Roman", "Comic Sans MS", "Verdana"], label="Font Type")
-        return [width, kerning, font_size, font_type]
+        bg_color = gr.Dropdown(choices=["white", "black", "red", "green", "blue", "yellow", "purple", "orange", "pink", "cyan", "brown", "gray", "lime", "indigo", "violet", "gold", "silver", "beige", "teal", "navy", "maroon"], label="Background Color")
+        return [width, kerning, font_size, font_type, bg_color]
 
-    def run(self, p, width, kerning, font_size, font_type):
+    def run(self, p, width, kerning, font_size, font_type, bg_color):
         proc = process_images(p)
 
         # Initialize font to a default value
@@ -89,7 +125,7 @@ class Script(scripts.Script):
 
         for i in range(len(proc.images)):
             ascii_art = image_to_ascii(proc.images[i], width)
-            ascii_img = ascii_to_image(ascii_art, block_size=font_size, kerning=kerning, font=font)
+            ascii_img = ascii_to_image(ascii_art, block_size=font_size, kerning=kerning, font=font, bg_color=bg_color)
             proc.images[i] = ascii_img
 
         return proc
