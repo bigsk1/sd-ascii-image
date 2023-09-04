@@ -19,7 +19,7 @@ This script allows you to convert images into ASCII art within the Stable Diffus
 2. At the bottom of the IMG2IMG section, you'll find a dropdown for selecting scripts.
 3. Select "Convert to ASCII Art Image" from the dropdown to activate the script.
 4. Save the image from the web ui as they won't be saved in outputs img2img folder
-5. There will be a .txt file with seed number in the outputs/img2img-images/ascii folder
+5. There will be a .txt file with seed number in the outputs/img2img-images/ascii folder - you can copy and paste the ascii from .txt file
    
 ### Parameters
 
